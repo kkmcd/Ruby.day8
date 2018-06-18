@@ -1,0 +1,9 @@
+<!--<form action="/tweet/create" method="POST">-->
+<%= form_tag('/tweet/create', remote: true) do %>
+<!--    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">-->
+    <!--<textarea name="contents"></textarea>-->
+    <!--<input type="submit" value="작성하기">-->
+    <%=text_area_tag 'contents',  nil,  class: "form-control"%>
+    <%= submit_tag "작성하기" , class: "btn btn-primary" %>
+<!--</form>--> <!--form tag로 대체-->
+<% end%>
